@@ -43,7 +43,7 @@ const Injector = ({ into } = {}) => {
           injectionId: into.injectionId,
           injectorId,
           injectorInstance: this,
-          inject: () => <InjectionComponent {...this.props} />
+          inject: () => <InjectionComponent { ...InjectionComponent().props} {...this.props } />
         });
       }
 
@@ -52,7 +52,7 @@ const Injector = ({ into } = {}) => {
           injectionId: into.injectionId,
           injectorId,
           injectorInstance: this,
-          inject: () => <InjectionComponent {...nextProps} />
+          inject: () => <InjectionComponent { ...InjectionComponent().props } {...nextProps} />
         });
       }
 

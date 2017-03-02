@@ -111,7 +111,8 @@ function KeyedComponent({ children }) {
 export function keyedElements(prefix : string, items : Array<Object>) {
   let index = 0;
   return items.map(x => {
+    console.log('utils.js', '-->>>>', x);
     index++;
-    return <KeyedComponent key={`${prefix}_${index}`}>{x}</KeyedComponent>;
+    return <KeyedComponent injectedComponentProps={ x.props } key={`${prefix}_${index}`}>{x}</KeyedComponent>;
   });
 }

@@ -43,7 +43,6 @@ const Injectable = (VeinComponent) => {
 
     render() {
       const keyed = keyedElements(`injections`, this.state.injections);
-
       return (
         <VeinComponent
           injections={keyed}

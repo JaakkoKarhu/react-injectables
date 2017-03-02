@@ -90,7 +90,6 @@ class InjectablesProvider extends Component {
     const registration = this.getRegistration({ injectionId });
     const injectable = this.findInjectable(
       { registration, injectableInstance });
-
     if (withoutAll(registration.injectables)([injectable]).length > 0) {
       const newInjectable = {
         instance: injectableInstance,
